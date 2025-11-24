@@ -6,8 +6,8 @@ from datetime import datetime
 from typing import Annotated, Literal, List, Optional
 from dataclasses import dataclass, field, asdict
 
-print("🚀 WELLNESS AND HEALTH COMPANION - Takshak Singh")
-print("💡 agent.py LOADED SUCCESSFULLY!")
+print("WELLNESS AND HEALTH COMPANION - Takshak Singh")
+print("agent.py LOADED SUCCESSFULLY!")
 
 from dotenv import load_dotenv
 from pydantic import Field
@@ -30,10 +30,6 @@ from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
 logger = logging.getLogger("agent")
 load_dotenv(".env.local")
-
-# ======================================================
-# 🧠 STATE MANAGEMENT & DATA STRUCTURES
-# ======================================================
 
 @dataclass
 class CheckInState:
@@ -61,9 +57,6 @@ class Userdata:
     history_summary: str  # String containing info about previous sessions
     session_start: datetime = field(default_factory=datetime.now)
 
-# ======================================================
-# 💾 PERSISTENCE LAYERS (JSON LOGGING)
-# ======================================================
 WELLNESS_LOG_FILE = "wellness_log.json"
 
 def get_log_path():
