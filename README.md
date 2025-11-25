@@ -1,34 +1,51 @@
-# AI Voice Agents Challenge - Starter Repository
+On Day 2 
+We turn the starter agent into a coffee shop barista that can take voice orders and show a neat text summary.
+> **Day 2 Submission for the "Ten Days of Voice Agents 2025" Challenge**
+
+## 📖 Project Overview
+
+This project is a **Voice-Activated Coffee Shop Barista** built using Python and the LiveKit Agents framework. It serves as an intelligent conversational interface that mimics a real-world barista interaction.
+
+The agent is designed to:
+- **Greet customers** warmly and ask for their order.
+- **Process voice commands** to identify coffee preferences (e.g., Latte, Cappuccino) and customizations (e.g., skim milk, extra sugar).
+- **Capture user details**, specifically asking for the customer's name to personalize the experience.
+- **Log orders** persistently (simulated database entry) for backend processing.
+
+This project was built as part of the **Murf AI Voice Agents Challenge**, demonstrating the integration of low-latency Text-to-Speech (TTS) with real-time conversational logic.
+
+## ✨ Key Features
+
+- **Real-time Voice Interaction**: Uses LiveKit for low-latency audio streaming.
+- **Human-like TTS**: Integrated with **Murf AI (Falcon Model)** for natural-sounding voice responses.
+- **Order Management Logic**: Capable of handling multi-turn conversations to construct a complete order.
+- **Data Persistence**: Saves completed orders to a local text log/database file.
+
+## 🛠️ Tech Stack
+
+- **Programming Language**: Python
+- **Voice Framework**: [LiveKit Agents](https://docs.livekit.io/agents/)
+- **Text-to-Speech (TTS)**: Murf AI
+- **Speech-to-Text (STT)**: Deepgram (or OpenAI Whisper, depending on configuration)
+- **LLM Engine**: OpenAI GPT-4o (for conversational logic)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+- Python 3.9 or higher
+- A LiveKit Cloud project (or local instance)
+- API Keys for:
+  - LiveKit
+  - OpenAI
+  - Murf AI
+
+Once running, you can connect to the agent using the LiveKit Playground or your custom frontend to place your coffee order!
+
+# AI Voice Agents Challenge
 
 Welcome to the **AI Voice Agents Challenge** by [murf.ai](https://murf.ai)!
-
-## About the Challenge
-
-We just launched **Murf Falcon** – the consistently fastest TTS API, and you're going to be among the first to test it out in ways never thought before!
-
-**Build 10 AI Voice Agents over the course of 10 Days** along with help from our devs and the community champs, and win rewards!
-
-### How It Works
-
-- One task to be provided everyday along with a GitHub repo for reference
-- Build a voice agent with specific personas and skills
-- Post on GitHub and share with the world on LinkedIn!
-
-## Repository Structure
-
-This is a **monorepo** that contains both the backend and frontend for building voice agent applications. It's designed to be your starting point for each day's challenge task.
-
-```
-falcon-tdova-nov25-livekit/
-├── backend/          # LiveKit Agents backend with Murf Falcon TTS
-├── frontend/         # React/Next.js frontend for voice interaction
-├── start_app.sh      # Convenience script to start all services
-└── README.md         # This file
-```
-
-### Backend
-
-The backend is based on [LiveKit's agent-starter-python](https://github.com/livekit-examples/agent-starter-python) with modifications to integrate **Murf Falcon TTS** for ultra-fast, high-quality voice synthesis.
 
 **Features:**
 
@@ -188,6 +205,16 @@ cd backend
 uv run pytest
 ```
 
+## 🤝 Acknowledgments
+
+- **Murf AI**: For organizing the "Ten Days of Voice Agents" challenge and providing the Falcon TTS model.
+- **LiveKit**: For the robust real-time audio infrastructure.
+- **Community**: Thanks to fellow developers participating in the challenge for the shared learning experience.
+
+***
+
+*Developed by taksshak - 2025*
+
 Learn more about testing voice agents in the [LiveKit testing documentation](https://docs.livekit.io/agents/build/testing/).
 
 ## Contributing & Community
@@ -202,13 +229,5 @@ This is a challenge repository, but we encourage collaboration and knowledge sha
 ## License
 
 This project is based on MIT-licensed templates from LiveKit and includes integration with Murf Falcon. See individual LICENSE files in backend and frontend directories for details.
-
-## Have Fun!
-
-Remember, the goal is to learn, experiment, and build amazing voice AI agents. Don't hesitate to be creative and push the boundaries of what's possible with Murf Falcon and LiveKit!
-
-Good luck with the challenge!
-
----
 
 Built for the AI Voice Agents Challenge by murf.ai
