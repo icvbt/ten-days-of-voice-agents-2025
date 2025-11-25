@@ -1,18 +1,36 @@
-# AI Voice Agents Challenge - Starter Repository
+# 🌿 Health & Wellness Voice Companion
 
-Welcome to the **AI Voice Agents Challenge** by [murf.ai](https://murf.ai)!
+> **Day 3 Submission for the "Ten Days of Voice Agents 2025" Challenge**
 
-## About the Challenge
+## 📖 Project Overview
 
-We just launched **Murf Falcon** – the consistently fastest TTS API, and you're going to be among the first to test it out in ways never thought before!
+This project is a **Daily Health & Wellness Voice Companion** built using Python and the LiveKit Agents framework [web:13]. It serves as an empathetic AI wellness coach that engages users in supportive conversations about their mental and physical health.
 
-**Build 10 AI Voice Agents over the course of 10 Days** along with help from our devs and the community champs, and win rewards!
+The agent is designed to:
+- **Check in on daily wellness** by asking about energy levels, mood, and overall well-being.
+- **Set achievable goals** based on the user's current state and capacity.
+- **Provide personalized support** with empathetic responses tailored to the user's emotional state.
+- **Track wellness progress** by logging daily check-ins, goals, and user interactions.
+- **Offer gentle guidance** for stress management, productivity, and self-care activities.
 
-### How It Works
+This project was built as part of the **Murf AI Voice Agents Challenge**, demonstrating compassionate AI design with real-time voice interaction capabilities [web:15].
 
-- One task to be provided everyday along with a GitHub repo for reference
-- Build a voice agent with specific personas and skills
-- Post on GitHub and share with the world on LinkedIn!
+## ✨ Key Features
+
+- **Empathetic Conversations**: Recognizes low energy states and adjusts goal-setting accordingly.
+- **Real-time Voice Interaction**: Uses LiveKit for seamless audio streaming and natural dialogue flow.
+- **Context-Aware Responses**: Remembers conversation context to provide relevant support throughout the session.
+- **Wellness Logging**: Automatically saves daily check-ins, mood assessments, and goals to a `wellness_log.txt` file [web:13].
+- **Human-like TTS**: Integrated with **Murf AI (Falcon Model)** for warm, supportive voice responses.
+- **Mental Health Support**: Provides guided suggestions, breathing exercises, and achievable micro-tasks [web:17].
+
+## 🛠️ Tech Stack
+
+- **Programming Language**: Python
+- **Voice Framework**: [LiveKit Agents](https://docs.livekit.io/agents/)
+- **Text-to-Speech (TTS)**: Murf AI (Falcon Model)
+- **Speech-to-Text (STT)**: Deepgram (or OpenAI Whisper)
+- **LLM Engine**: OpenAI GPT-4o (for conversational intelligence and empathy)
 
 ## Repository Structure
 
@@ -189,6 +207,32 @@ uv run pytest
 ```
 
 Learn more about testing voice agents in the [LiveKit testing documentation](https://docs.livekit.io/agents/build/testing/).
+
+## 📊 Wellness Log Output
+
+The agent automatically saves conversation summaries to `wellness_log.txt`, including:
+- Current mood and energy levels
+- Goals set during the session
+- Recommended actionable steps
+- Recap of the day's wellness focus [web:13][web:18]
+
+## 🎯 Use Cases
+
+- **Mental Health Support**: Daily check-ins for individuals managing stress or low motivation [web:17].
+- **Productivity Coaching**: Setting micro-goals based on current capacity.
+- **Wellness Tracking**: Maintaining a conversational log of daily emotional and physical states.
+- **Telemedicine Integration**: Complementing healthcare services with voice-based wellness monitoring [web:17].
+
+## 🤝 Acknowledgments
+
+- **Murf AI**: For organizing the "Ten Days of Voice Agents" challenge and providing the Falcon TTS model.
+- **LiveKit**: For the robust real-time audio infrastructure.
+- **Community**: Thanks to fellow developers participating in the challenge for shared learning and inspiration.
+
+---
+
+*Developed with care for Day 3 of the Murf AI Voice Agents Challenge - 2025* 🌱- ##taksshak 2025
+
 
 ## Contributing & Community
 
