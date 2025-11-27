@@ -1,63 +1,36 @@
-# AI Voice Agents Challenge - Starter Repository
+# 🎓 Teaching-the-Tutor: Active Recall Coach
 
-Welcome to the **AI Voice Agents Challenge** by [murf.ai](https://murf.ai)!
+> **Day 4 Submission for the "Ten Days of Voice Agents 2025" Challenge**
 
-## About the Challenge
+## 📖 Project Overview
 
-We just launched **Murf Falcon** – the consistently fastest TTS API, and you're going to be among the first to test it out in ways never thought before!
+This project is a **"Teach-the-Tutor" Active Recall Coach** built using Python and the LiveKit Agents framework. It flips the traditional learning model by having the user teach concepts to the AI. This method leverages the **Feynman Technique** and **Active Recall** to deepen the user's understanding of a subject.
 
-**Build 10 AI Voice Agents over the course of 10 Days** along with help from our devs and the community champs, and win rewards!
+The agent acts as a curious student who:
+- **Asks the user to explain a specific topic** (e.g., Photosynthesis, Newton's Laws, Python Lists).
+- **Simulates gaps in knowledge** to prompt deeper explanation from the user.
+- **Asks follow-up questions** to test the user's grasp of the material.
+- **Provides feedback** on how well the user explained the concept, highlighting areas that were clear or confusing.
 
-### How It Works
+This project was built as part of the **Murf AI Voice Agents Challenge** (Day 4), demonstrating how voice AI can be used for educational reinforcement [web:22][web:23].
 
-- One task to be provided everyday along with a GitHub repo for reference
-- Build a voice agent with specific personas and skills
-- Post on GitHub and share with the world on LinkedIn!
+## ✨ Key Features
 
-## Repository Structure
+- **Role-Reversal Learning**: The AI takes the role of a student, compelling the user to articulate their knowledge clearly.
+- **Active Recall Stimulation**: By asking "Why?" and "How?" questions, the agent forces the user to retrieve information from memory.
+- **Real-time Voice Interaction**: Powered by LiveKit for low-latency conversational flow.
+- **Adaptive Questioning**: The agent adjusts its "confusion level" based on the clarity of the user's explanation.
+- **Session Summary**: At the end of the session, the agent provides a brief review of what it "learned" from the user.
 
-This is a **monorepo** that contains both the backend and frontend for building voice agent applications. It's designed to be your starting point for each day's challenge task.
+## 🛠️ Tech Stack
 
-```
-falcon-tdova-nov25-livekit/
-├── backend/          # LiveKit Agents backend with Murf Falcon TTS
-├── frontend/         # React/Next.js frontend for voice interaction
-├── start_app.sh      # Convenience script to start all services
-└── README.md         # This file
-```
+- **Programming Language**: Python
+- **Voice Framework**: [LiveKit Agents](https://docs.livekit.io/agents/)
+- **Text-to-Speech (TTS)**: Murf AI (Falcon Model)
+- **Speech-to-Text (STT)**: Deepgram (or OpenAI Whisper)
+- **LLM Engine**: OpenAI GPT-4o (configured with a "Curious Student" system prompt)
 
-### Backend
-
-The backend is based on [LiveKit's agent-starter-python](https://github.com/livekit-examples/agent-starter-python) with modifications to integrate **Murf Falcon TTS** for ultra-fast, high-quality voice synthesis.
-
-**Features:**
-
-- Complete voice AI agent framework using LiveKit Agents
-- Murf Falcon TTS integration for fastest text-to-speech
-- LiveKit Turn Detector for contextually-aware speaker detection
-- Background voice cancellation
-- Integrated metrics and logging
-- Complete test suite with evaluation framework
-- Production-ready Dockerfile
-
-[→ Backend Documentation](./backend/README.md)
-
-### Frontend
-
-The frontend is based on [LiveKit's agent-starter-react](https://github.com/livekit-examples/agent-starter-react), providing a modern, beautiful UI for interacting with your voice agents.
-
-**Features:**
-
-- Real-time voice interaction with LiveKit Agents
-- Camera video streaming support
-- Screen sharing capabilities
-- Audio visualization and level monitoring
-- Light/dark theme switching
-- Highly customizable branding and UI
-
-[→ Frontend Documentation](./frontend/README.md)
-
-## Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
 
