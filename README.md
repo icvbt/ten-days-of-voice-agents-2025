@@ -1,63 +1,36 @@
-# AI Voice Agents Challenge - Starter Repository
+# 💼 FAQ Sales Development Rep (SDR) & Lead Capture
 
-Welcome to the **AI Voice Agents Challenge** by [murf.ai](https://murf.ai)!
+> **Day 5 Submission for the "Ten Days of Voice Agents 2025" Challenge**
 
-## About the Challenge
+## 📖 Project Overview
 
-We just launched **Murf Falcon** – the consistently fastest TTS API, and you're going to be among the first to test it out in ways never thought before!
+This project is a **Voice-Activated Sales Development Representative (SDR)** built using Python and the LiveKit Agents framework. It is designed to automate the initial stages of the sales process by handling customer inquiries and capturing qualified leads in real-time.
 
-**Build 10 AI Voice Agents over the course of 10 Days** along with help from our devs and the community champs, and win rewards!
+The agent acts as a knowledgeable company representative that:
+- **Answers Frequently Asked Questions (FAQs)** about products, pricing, and services.
+- **Qualifies leads** by asking relevant questions to gauge customer interest.
+- **Captures contact information** (Name, Email, Company) during the natural flow of conversation.
+- **Logs lead data** to a structured file (simulating a CRM entry) for the sales team to follow up.
 
-### How It Works
+This project was built as part of the **Murf AI Voice Agents Challenge** (Day 5), demonstrating how voice AI can streamline customer engagement and lead generation [web:37][web:38].
 
-- One task to be provided everyday along with a GitHub repo for reference
-- Build a voice agent with specific personas and skills
-- Post on GitHub and share with the world on LinkedIn!
+## ✨ Key Features
 
-## Repository Structure
+- **Intelligent FAQ Handling**: Uses a predefined knowledge base (system prompt) to answer specific questions about the business accurately.
+- **Natural Lead Capture**: seamlessly extracts user details (Name, Phone, Email) without breaking the conversational flow.
+- **Real-time Voice Interaction**: Powered by LiveKit for low-latency, human-like conversation.
+- **Data Persistence**: Automatically saves captured lead details to a `leads.csv` or `leads.txt` file.
+- **Professional Persona**: Integrated with **Murf AI (Falcon Model)** to provide a polished, professional voice suitable for business contexts.
 
-This is a **monorepo** that contains both the backend and frontend for building voice agent applications. It's designed to be your starting point for each day's challenge task.
+## 🛠️ Tech Stack
 
-```
-falcon-tdova-nov25-livekit/
-├── backend/          # LiveKit Agents backend with Murf Falcon TTS
-├── frontend/         # React/Next.js frontend for voice interaction
-├── start_app.sh      # Convenience script to start all services
-└── README.md         # This file
-```
+- **Programming Language**: Python
+- **Voice Framework**: [LiveKit Agents](https://docs.livekit.io/agents/)
+- **Text-to-Speech (TTS)**: Murf AI (Falcon Model)
+- **Speech-to-Text (STT)**: Deepgram (or OpenAI Whisper)
+- **LLM Engine**: OpenAI GPT-4o (configured with Sales & Lead Capture logic)
 
-### Backend
-
-The backend is based on [LiveKit's agent-starter-python](https://github.com/livekit-examples/agent-starter-python) with modifications to integrate **Murf Falcon TTS** for ultra-fast, high-quality voice synthesis.
-
-**Features:**
-
-- Complete voice AI agent framework using LiveKit Agents
-- Murf Falcon TTS integration for fastest text-to-speech
-- LiveKit Turn Detector for contextually-aware speaker detection
-- Background voice cancellation
-- Integrated metrics and logging
-- Complete test suite with evaluation framework
-- Production-ready Dockerfile
-
-[→ Backend Documentation](./backend/README.md)
-
-### Frontend
-
-The frontend is based on [LiveKit's agent-starter-react](https://github.com/livekit-examples/agent-starter-react), providing a modern, beautiful UI for interacting with your voice agents.
-
-**Features:**
-
-- Real-time voice interaction with LiveKit Agents
-- Camera video streaming support
-- Screen sharing capabilities
-- Audio visualization and level monitoring
-- Light/dark theme switching
-- Highly customizable branding and UI
-
-[→ Frontend Documentation](./frontend/README.md)
-
-## Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -160,18 +133,6 @@ pnpm dev
 
 Then open http://localhost:3000 in your browser!
 
-## Daily Challenge Tasks
-
-Each day, you'll receive a new task that builds upon your voice agent. The tasks will help you:
-
-- Implement different personas and conversation styles
-- Add custom tools and capabilities
-- Integrate with external APIs
-- Build domain-specific agents (customer service, tutoring, etc.)
-- Optimize performance and user experience
-
-**Stay tuned for daily task announcements!**
-
 ## Documentation & Resources
 
 - [Murf Falcon TTS Documentation](https://murf.ai/api/docs/text-to-speech/streaming)
@@ -190,25 +151,9 @@ uv run pytest
 
 Learn more about testing voice agents in the [LiveKit testing documentation](https://docs.livekit.io/agents/build/testing/).
 
-## Contributing & Community
-
-This is a challenge repository, but we encourage collaboration and knowledge sharing!
-
-- Share your solutions and learnings on GitHub
-- Post about your progress on LinkedIn
-- Join the [LiveKit Community Slack](https://livekit.io/join-slack)
-- Connect with other challenge participants
 
 ## License
 
 This project is based on MIT-licensed templates from LiveKit and includes integration with Murf Falcon. See individual LICENSE files in backend and frontend directories for details.
-
-## Have Fun!
-
-Remember, the goal is to learn, experiment, and build amazing voice AI agents. Don't hesitate to be creative and push the boundaries of what's possible with Murf Falcon and LiveKit!
-
-Good luck with the challenge!
-
----
 
 Built for the AI Voice Agents Challenge by murf.ai
