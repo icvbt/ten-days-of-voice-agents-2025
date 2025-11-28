@@ -1,18 +1,37 @@
-# AI Voice Agents Challenge - Starter Repository
+# 🛒 Food & Grocery Ordering Voice Agent with Cart Management
 
-Welcome to the **AI Voice Agents Challenge** by [murf.ai](https://murf.ai)!
+> **Day 7 Submission for the "Ten Days of Voice Agents 2025" Challenge**
 
-## About the Challenge
+## 📖 Project Overview
 
-We just launched **Murf Falcon** – the consistently fastest TTS API, and you're going to be among the first to test it out in ways never thought before!
+This project is an intelligent **Food & Grocery Voice Assistant** built using Python and the LiveKit Agents framework. It acts as a virtual shop assistant capable of managing a shopping cart in real-time, handling complex orders, and simulating a checkout process for a grocery store or restaurant [web:58][web:68].
 
-**Build 10 AI Voice Agents over the course of 10 Days** along with help from our devs and the community champs, and win rewards!
+The agent is designed to:
+- **Search & Recommend Items**: Browse a simulated inventory (e.g., "Dr. Abhishek's Indian Grocery Store") to find specific products.
+- **Manage a Shopping Cart**: Add, update, or remove items from a persistent cart using natural voice commands (e.g., "Add 5 packets of Maggie").
+- **Calculate Real-time Totals**: Instantly update the cart total as items are modified.
+- **Handle "Out of Stock" Scenarios**: gracefully inform users when an item is unavailable.
+- **Process Checkout**: Collect user details (Name, Address) and confirm the order, generating a unique order ID.
+- **Track Order Status**: Check the status of past orders (e.g., "Shipped", "Out for Delivery") using an order ID.
 
-### How It Works
+This project was built as part of the **Murf AI Voice Agents Challenge** (Day 7), demonstrating advanced state management and transactional voice AI capabilities [web:58].
 
-- One task to be provided everyday along with a GitHub repo for reference
-- Build a voice agent with specific personas and skills
-- Post on GitHub and share with the world on LinkedIn!
+## ✨ Key Features
+
+- **Dynamic Cart Management**: Supports multi-turn conversations to build a complete shopping list.
+- **Inventory Awareness**: Checks product availability before adding to the cart.
+- **Contextual Updates**: Understands requests like "Change that to 10 packets" based on the previous turn.
+- **Real-time Voice Interaction**: Powered by LiveKit for low-latency, human-like conversation.
+- **Data Persistence**: Saves orders to a local JSON/Text file database for retrieval and status tracking.
+- **Realistic TTS**: Integrated with **Murf AI (Falcon Model)** for a professional and friendly shop assistant voice.
+
+## 🛠️ Tech Stack
+
+- **Programming Language**: Python
+- **Voice Framework**: [LiveKit Agents](https://docs.livekit.io/agents/)
+- **Text-to-Speech (TTS)**: Murf AI (Falcon Model)
+- **Speech-to-Text (STT)**: Deepgram (or OpenAI Whisper)
+- **LLM Engine**: OpenAI GPT-4o (with Function Calling for cart operations)
 
 ## Repository Structure
 
@@ -29,16 +48,6 @@ falcon-tdova-nov25-livekit/
 ### Backend
 
 The backend is based on [LiveKit's agent-starter-python](https://github.com/livekit-examples/agent-starter-python) with modifications to integrate **Murf Falcon TTS** for ultra-fast, high-quality voice synthesis.
-
-**Features:**
-
-- Complete voice AI agent framework using LiveKit Agents
-- Murf Falcon TTS integration for fastest text-to-speech
-- LiveKit Turn Detector for contextually-aware speaker detection
-- Background voice cancellation
-- Integrated metrics and logging
-- Complete test suite with evaluation framework
-- Production-ready Dockerfile
 
 [→ Backend Documentation](./backend/README.md)
 
@@ -160,18 +169,6 @@ pnpm dev
 
 Then open http://localhost:3000 in your browser!
 
-## Daily Challenge Tasks
-
-Each day, you'll receive a new task that builds upon your voice agent. The tasks will help you:
-
-- Implement different personas and conversation styles
-- Add custom tools and capabilities
-- Integrate with external APIs
-- Build domain-specific agents (customer service, tutoring, etc.)
-- Optimize performance and user experience
-
-**Stay tuned for daily task announcements!**
-
 ## Documentation & Resources
 
 - [Murf Falcon TTS Documentation](https://murf.ai/api/docs/text-to-speech/streaming)
@@ -190,25 +187,10 @@ uv run pytest
 
 Learn more about testing voice agents in the [LiveKit testing documentation](https://docs.livekit.io/agents/build/testing/).
 
-## Contributing & Community
-
-This is a challenge repository, but we encourage collaboration and knowledge sharing!
-
-- Share your solutions and learnings on GitHub
-- Post about your progress on LinkedIn
-- Join the [LiveKit Community Slack](https://livekit.io/join-slack)
-- Connect with other challenge participants
-
 ## License
 
 This project is based on MIT-licensed templates from LiveKit and includes integration with Murf Falcon. See individual LICENSE files in backend and frontend directories for details.
 
-## Have Fun!
-
-Remember, the goal is to learn, experiment, and build amazing voice AI agents. Don't hesitate to be creative and push the boundaries of what's possible with Murf Falcon and LiveKit!
-
-Good luck with the challenge!
-
 ---
 
-Built for the AI Voice Agents Challenge by murf.ai
+Built for the AI Voice Agents Challenge by takshak
