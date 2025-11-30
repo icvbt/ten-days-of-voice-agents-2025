@@ -1,19 +1,3 @@
-# IMPROVE THE AGENT AS PER YOUR NEED 1
-"""
-Day 8 – Voice Game Master (D&D-Style Adventure) - Voice-only GM agent
-
-- Uses LiveKit agent plumbing similar to the provided food_agent_sqlite example.
-- GM persona, universe, tone and rules are encoded in the agent instructions.
-- Keeps STT/TTS/Turn detector/VAD integration untouched (murf, deepgram, silero, turn_detector).
-- Tools:
-    - start_adventure(): start a fresh session and introduce the scene
-    - get_scene(): return the current scene description (GM text) ending with "What do you do?"
-    - player_action(action_text): accept player's spoken action, update state, advance scene
-    - show_journal(): list remembered facts, NPCs, named locations, choices
-    - restart_adventure(): reset state and start over
-- Userdata keeps continuity between turns: history, inventory, named NPCs/locations, choices, current_scene
-"""
-
 import json
 import logging
 import os
@@ -604,4 +588,5 @@ async def entrypoint(ctx: JobContext):
     await ctx.connect()
 
 if __name__ == "__main__":
+
     cli.run_app(WorkerOptions(entrypoint_fnc=entrypoint, prewarm_fnc=prewarm))
