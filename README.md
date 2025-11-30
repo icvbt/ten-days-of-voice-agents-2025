@@ -1,29 +1,29 @@
-# 🧠 Day 8 – LLM Query Voice Agent
+# 🎲 D&D Voice Game Master Agent
 
-> Voice agent that routes natural language questions to an LLM “query endpoint” and returns concise, helpful answers in real time.
+> **Day 8 Submission for the "Ten Days of Voice Agents 2025" Challenge**
 
-## 📖 Overview
+## 📖 Project Overview
 
-This project implements a **Day 8 Voice Agent** for the Murf AI “Ten Days of Voice Agents 2025” challenge. The agent acts like a conversational front-end for an LLM query endpoint: the user speaks a question, the agent sends a structured query to an LLM, then returns a clear, spoken answer with optional follow-up suggestions [web:1][web:33].
+This project is an immersive **Voice-Powered Dungeon Master** built using Python and the LiveKit Agents framework. It acts as a dynamic Game Master (GM) for a D&D-style adventure, narrating atmospheric stories, presenting branching choices, and responding to player decisions in real-time [web:72][attached_file:1].
 
-The agent is designed to:
-- Accept open-ended user questions via voice (e.g., “Explain JWT in simple terms” or “Summarize the pros and cons of microservices”).
-- Turn those questions into a well-formed LLM request with instructions on answer style.
-- Read back concise, structured answers using Murf Falcon TTS.
-- Maintain lightweight context so follow-up questions like “Explain that part again in one line” still make sense.
+The agent guides players through a mysterious coastal adventure featuring:
+- **Interactive Storytelling**: Describes vivid scenes (ruined watchtowers, buried treasure boxes, hidden hatches).
+- **Branching Choices**: Offers 2-3 clear options at each decision point (e.g., "Inspect box", "Approach tower", "Follow path to cottages").
+- **Dynamic Narration**: Adapts the story based on player choices with immersive descriptions and consequences.
+- **Game State Management**: Tracks adventure progress, prevents invalid paths, and handles restarts.
+- **Atmospheric Voice**: Uses a calm, mysterious narrator voice perfect for fantasy adventures.
 
-It showcases how to build a reusable “LLM query layer” on top of your existing Day 1–7 agents so they can answer deeper knowledge questions on demand [web:33].
+Built for **Murf AI Voice Agents Challenge Day 8**, this demonstrates advanced conversational state management and narrative AI [web:72].
 
 ## ✨ Key Features
 
-- Natural language Q&A over voice, backed by an LLM query endpoint.
-- System prompts to keep answers:
-  - Concise and structured.
-  - Free of sensitive or disallowed content.
-  - Easy to understand for non-experts.
-- Lightweight conversation memory for short follow-up questions.
-- Real-time streaming audio with low latency.
-- Simple abstraction so other agents (barista, wellness, SDR, etc.) can call this skill.
+- **Rich Narrative Flow**: Multi-turn adventure with meaningful choices affecting the story.
+- **Voice Choice Interface**: Players say simple phrases like "Inspect box" or "Approach tower".
+- **State Persistence**: Remembers player decisions across conversation turns.
+- **Error Recovery**: Gracefully handles invalid inputs and offers restarts.
+- **Immersive Audio**: Powered by **Murf AI Falcon Model** with a mysterious, storytelling voice.
+- **Real-time Interaction**: LiveKit enables instant responses for seamless gameplay.
+
 - 
 ### Prerequisites
 
