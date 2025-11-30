@@ -1,64 +1,30 @@
-# AI Voice Agents Challenge - Starter Repository
+# 🧠 Day 8 – LLM Query Voice Agent
 
-Welcome to the **AI Voice Agents Challenge** by [murf.ai](https://murf.ai)!
+> Voice agent that routes natural language questions to an LLM “query endpoint” and returns concise, helpful answers in real time.
 
-## About the Challenge
+## 📖 Overview
 
-We just launched **Murf Falcon** – the consistently fastest TTS API, and you're going to be among the first to test it out in ways never thought before!
+This project implements a **Day 8 Voice Agent** for the Murf AI “Ten Days of Voice Agents 2025” challenge. The agent acts like a conversational front-end for an LLM query endpoint: the user speaks a question, the agent sends a structured query to an LLM, then returns a clear, spoken answer with optional follow-up suggestions [web:1][web:33].
 
-**Build 10 AI Voice Agents over the course of 10 Days** along with help from our devs and the community champs, and win rewards!
+The agent is designed to:
+- Accept open-ended user questions via voice (e.g., “Explain JWT in simple terms” or “Summarize the pros and cons of microservices”).
+- Turn those questions into a well-formed LLM request with instructions on answer style.
+- Read back concise, structured answers using Murf Falcon TTS.
+- Maintain lightweight context so follow-up questions like “Explain that part again in one line” still make sense.
 
-### How It Works
+It showcases how to build a reusable “LLM query layer” on top of your existing Day 1–7 agents so they can answer deeper knowledge questions on demand [web:33].
 
-- One task to be provided everyday along with a GitHub repo for reference
-- Build a voice agent with specific personas and skills
-- Post on GitHub and share with the world on LinkedIn!
+## ✨ Key Features
 
-## Repository Structure
-
-This is a **monorepo** that contains both the backend and frontend for building voice agent applications. It's designed to be your starting point for each day's challenge task.
-
-```
-falcon-tdova-nov25-livekit/
-├── backend/          # LiveKit Agents backend with Murf Falcon TTS
-├── frontend/         # React/Next.js frontend for voice interaction
-├── start_app.sh      # Convenience script to start all services
-└── README.md         # This file
-```
-
-### Backend
-
-The backend is based on [LiveKit's agent-starter-python](https://github.com/livekit-examples/agent-starter-python) with modifications to integrate **Murf Falcon TTS** for ultra-fast, high-quality voice synthesis.
-
-**Features:**
-
-- Complete voice AI agent framework using LiveKit Agents
-- Murf Falcon TTS integration for fastest text-to-speech
-- LiveKit Turn Detector for contextually-aware speaker detection
-- Background voice cancellation
-- Integrated metrics and logging
-- Complete test suite with evaluation framework
-- Production-ready Dockerfile
-
-[→ Backend Documentation](./backend/README.md)
-
-### Frontend
-
-The frontend is based on [LiveKit's agent-starter-react](https://github.com/livekit-examples/agent-starter-react), providing a modern, beautiful UI for interacting with your voice agents.
-
-**Features:**
-
-- Real-time voice interaction with LiveKit Agents
-- Camera video streaming support
-- Screen sharing capabilities
-- Audio visualization and level monitoring
-- Light/dark theme switching
-- Highly customizable branding and UI
-
-[→ Frontend Documentation](./frontend/README.md)
-
-## Quick Start
-
+- Natural language Q&A over voice, backed by an LLM query endpoint.
+- System prompts to keep answers:
+  - Concise and structured.
+  - Free of sensitive or disallowed content.
+  - Easy to understand for non-experts.
+- Lightweight conversation memory for short follow-up questions.
+- Real-time streaming audio with low latency.
+- Simple abstraction so other agents (barista, wellness, SDR, etc.) can call this skill.
+- 
 ### Prerequisites
 
 Make sure you have the following installed:
@@ -160,17 +126,6 @@ pnpm dev
 
 Then open http://localhost:3000 in your browser!
 
-## Daily Challenge Tasks
-
-Each day, you'll receive a new task that builds upon your voice agent. The tasks will help you:
-
-- Implement different personas and conversation styles
-- Add custom tools and capabilities
-- Integrate with external APIs
-- Build domain-specific agents (customer service, tutoring, etc.)
-- Optimize performance and user experience
-
-**Stay tuned for daily task announcements!**
 
 ## Documentation & Resources
 
@@ -188,27 +143,8 @@ cd backend
 uv run pytest
 ```
 
-Learn more about testing voice agents in the [LiveKit testing documentation](https://docs.livekit.io/agents/build/testing/).
-
-## Contributing & Community
-
-This is a challenge repository, but we encourage collaboration and knowledge sharing!
-
-- Share your solutions and learnings on GitHub
-- Post about your progress on LinkedIn
-- Join the [LiveKit Community Slack](https://livekit.io/join-slack)
-- Connect with other challenge participants
-
 ## License
 
 This project is based on MIT-licensed templates from LiveKit and includes integration with Murf Falcon. See individual LICENSE files in backend and frontend directories for details.
 
-## Have Fun!
-
-Remember, the goal is to learn, experiment, and build amazing voice AI agents. Don't hesitate to be creative and push the boundaries of what's possible with Murf Falcon and LiveKit!
-
-Good luck with the challenge!
-
----
-
-Built for the AI Voice Agents Challenge by murf.ai
+Built for the AI Voice Agents Challenege by taksshak
