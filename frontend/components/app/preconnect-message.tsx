@@ -46,7 +46,7 @@ export function PreConnectMessage({ className, messages = [] }: PreConnectMessag
           className={cn('pointer-events-none text-center', className)}
         >
           <ShimmerText className="text-sm font-semibold">
-            Guts is listening, ask it a question
+            Max is listening, want to order something?
           </ShimmerText>
         </MotionMessage>
       )}
