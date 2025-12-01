@@ -1,6 +1,4 @@
-# AI Voice Agents Challenge - Repository
-
-Welcome to the **AI Voice Agents Challenge** by [murf.ai](https://murf.ai)!
+# AI Voice Agents Challenge Day 1
 
 ## Repository Structure
 
@@ -163,10 +161,6 @@ The backend includes a comprehensive test suite:
 cd backend
 uv run pytest
 ```
-
-Learn more about testing voice agents in the [LiveKit testing documentation](https://docs.livekit.io/agents/build/testing/).
-
-## Contributing & Community
 
 
 ## License
