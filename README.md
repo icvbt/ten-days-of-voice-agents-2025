@@ -1,30 +1,39 @@
-# 🎲 D&D Voice Game Master Agent
+# 🛒 Day 9 – E‑commerce Voice Agent (Agentic Commerce Inspired)
 
-> **Day 8 Submission for the "Ten Days of Voice Agents 2025" Challenge**
+> Voice-driven shopping assistant that understands what you want to buy, browses a catalog, and places real orders via voice.
 
 ## 📖 Project Overview
 
-This project is an immersive **Voice-Powered Dungeon Master** built using Python and the LiveKit Agents framework. It acts as a dynamic Game Master (GM) for a D&D-style adventure, narrating atmospheric stories, presenting branching choices, and responding to player decisions in real-time [web:72][attached_file:1].
+This project implements an **E‑commerce Voice Agent** inspired by the Agentic Commerce Protocol (ACP), built using Python, LiveKit Agents, and Murf Falcon TTS. [web:83][web:89]  
+The agent acts as a voice-first shopping assistant that can search products, filter options, manage a cart, and place orders end-to-end using natural conversation. [web:83][web:86]
 
-The agent guides players through a mysterious coastal adventure featuring:
-- **Interactive Storytelling**: Describes vivid scenes (ruined watchtowers, buried treasure boxes, hidden hatches).
-- **Branching Choices**: Offers 2-3 clear options at each decision point (e.g., "Inspect box", "Approach tower", "Follow path to cottages").
-- **Dynamic Narration**: Adapts the story based on player choices with immersive descriptions and consequences.
-- **Game State Management**: Tracks adventure progress, prevents invalid paths, and handles restarts.
-- **Atmospheric Voice**: Uses a calm, mysterious narrator voice perfect for fantasy adventures.
+The agent can:
+- Understand intents like “show me mugs under ₹500” or “I want a black hoodie in size L”. [web:86]
+- Browse a structured product catalog (ID, name, price, category, tags). [web:83]
+- Create and update cart/order objects with product IDs, quantities, prices, and timestamps. [web:86]
+- Confirm orders and return an order ID plus final amount. [web:83]
+- Answer questions like “What did I just buy?” or “What’s in my cart?”. [web:86]
 
-Built for **Murf AI Voice Agents Challenge Day 8**, this demonstrates advanced conversational state management and narrative AI [web:72].
+Built as the **Day 9 submission** for the Murf AI Voice Agents Challenge – turning voice directly into commerce. [web:83][web:88]
 
 ## ✨ Key Features
 
-- **Rich Narrative Flow**: Multi-turn adventure with meaningful choices affecting the story.
-- **Voice Choice Interface**: Players say simple phrases like "Inspect box" or "Approach tower".
-- **State Persistence**: Remembers player decisions across conversation turns.
-- **Error Recovery**: Gracefully handles invalid inputs and offers restarts.
-- **Immersive Audio**: Powered by **Murf AI Falcon Model** with a mysterious, storytelling voice.
-- **Real-time Interaction**: LiveKit enables instant responses for seamless gameplay.
+- Natural-language product discovery (categories, colors, sizes, budgets). [web:86]
+- Voice-only cart management: add, update, remove, and review items. [web:83]
+- Lightweight “merchant layer” / ACP-style backend for catalog + orders. [web:86][web:89]
+- Orders persisted in JSON so each purchase is stored and queryable. [web:86]
+- Fast, human-like narration using **Murf Falcon** real-time TTS. [web:12][web:87]
+- Real-time, low-latency interaction powered by **LiveKit Agents**. [web:77][web:87]
 
-- 
+## 🛠️ Tech Stack
+
+- Language: Python 3.9+  
+- Realtime framework: LiveKit Agents [web:77]  
+- TTS: Murf AI Falcon (Realtime API) [web:12][web:87]  
+- STT: Deepgram / Whisper (configurable) [web:83]  
+- LLM: OpenAI GPT‑4o for intent + slot extraction [web:83]  
+- Storage: Local JSON files for products and orders [web:86]
+ 
 ### Prerequisites
 
 Make sure you have the following installed:
