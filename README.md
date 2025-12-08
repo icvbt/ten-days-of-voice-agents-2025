@@ -1,60 +1,100 @@
-# AI Voice Agents Challenge - Repository
+# 🎙️ Voice Improv Battle Host Agent
 
-Welcome to the **AI Voice Agents Challenge** by [murf.ai](https://murf.ai)!
+A dynamic AI voice agent that acts as the **host and referee** for interactive improv battles—where participants improvise scenes in real-time while the agent provides creative prompts, dynamic feedback, and entertaining commentary.
 
-## Repository Structure
+Built as part of **Murf AI's 10 Days of Voice Agents Challenge** (Day 10).
 
-This is a **monorepo** that contains both the backend and frontend for building voice agent applications. It's designed to be your starting point for each day's challenge task.
+---
 
-```
-falcon-tdova-nov25-livekit/
-├── backend/          # LiveKit Agents backend with Murf Falcon TTS
-├── frontend/         # React/Next.js frontend for voice interaction
-├── start_app.sh      # Convenience script to start all services
-└── README.md         # This file
-```
+## 🎭 What is Voice Improv Battle?
 
-### Backend
+Voice Improv Battle is an **entertainment-driven voice AI experience** where:
 
-The backend is based on [LiveKit's agent-starter-python](https://github.com/livekit-examples/agent-starter-python) with modifications to integrate **Murf Falcon TTS** for ultra-fast, high-quality voice synthesis.
+- A **host agent** introduces the battle and explains the rules
+- **Participants** (voice agents or humans) receive creative scene prompts and perform improvisation
+- The **host evaluates** each round with constructive feedback and energy
+- **Scoring and commentary** create an engaging competitive atmosphere
+- **Final verdict** announces the winner and highlights memorable moments
 
-**Features:**
+Example scenarios:
+- "You are a customer trying to return an obviously cursed object to a very skeptical shopkeeper"
+- "You are an overenthusiastic TV infomercial host selling a product that clearly does not work as advertised"
+- "You are a secret agent code-named Shadow infiltrating a high-stakes pigeon poker game"
 
-- Complete voice AI agent framework using LiveKit Agents
-- Murf Falcon TTS integration for fastest text-to-speech
-- LiveKit Turn Detector for contextually-aware speaker detection
-- Background voice cancellation
-- Integrated metrics and logging
-- Complete test suite with evaluation framework
-- Production-ready Dockerfile
+---
 
-[→ Backend Documentation](./backend/README.md)
+## ⚙️ Core Architecture
 
-### Frontend
+The host agent orchestrates multiple AI components working in harmony:
 
-The frontend is based on [LiveKit's agent-starter-react](https://github.com/livekit-examples/agent-starter-react), providing a modern, beautiful UI for interacting with your voice agents.
+### 1. **Dialogue Management**
+   - Dynamic conversation flow using LLM (GPT-4, Claude, etc.)
+   - Real-time turn management and scene transitions
+   - Context-aware response generation for engaging banter
 
-**Features:**
+### 2. **Voice Synthesis & Recognition**
+   - **Text-to-Speech:** Murf Falcon or compatible TTS for natural narration
+   - **Speech-to-Text:** Real-time transcription of participant responses
+   - Low-latency audio processing (<130ms for seamless interaction)
 
-- Real-time voice interaction with LiveKit Agents
-- Camera video streaming support
-- Screen sharing capabilities
-- Audio visualization and level monitoring
-- Light/dark theme switching
-- Highly customizable branding and UI
+### 3. **Orchestration Layer**
+   - Manages STT → LLM → TTS pipeline
+   - Handles timing, pauses, and turn-taking
+   - Maintains conversation state across multiple rounds
 
-[→ Frontend Documentation](./frontend/README.md)
+### 4. **Evaluation Module**
+   - Analyzes performance based on creativity, commitment, and humor
+   - Provides real-time feedback ("Bold commitment, but try to exaggerate more!")
+   - Tracks scores across rounds
 
-## Quick Start
+---
+
+## 🚀 Features
+
+✨ **Dynamic Scene Generation**  
+Randomly pulls creative improv prompts from a curated database to keep every battle fresh.
+
+🎤 **Real-Time Participant Interaction**  
+Listens, transcribes, and responds instantly to participant improvisation.
+
+📊 **Intelligent Feedback System**  
+Analyzes performance and delivers constructive, encouraging commentary tailored to each round.
+
+⏱️ **Adaptive Timing Control**  
+Manages round length, transition timing, and turn-taking using async event loops.
+
+🏆 **Scorekeeping & Rankings**  
+Tracks performance metrics and announces winners with memorable highlight reels.
+
+🎬 **Entertainment-First Design**  
+Host maintains energy and enthusiasm throughout, keeping the audience engaged.
+
+---
+
+## 🛠️ Tech Stack
+
+| Component | Technology |
+|-----------|-----------|
+| **LLM** | OpenAI GPT-4, Anthropic Claude, or custom fine-tuned model |
+| **Text-to-Speech** | Murf Falcon, ElevenLabs, or PlayHT |
+| **Speech-to-Text** | Google Cloud Speech-to-Text, AssemblyAI, or Deepgram |
+| **Voice Framework** | RetellAI, VoiceFlow, or custom Python orchestration |
+| **Backend** | Python (FastAPI/Flask) or Node.js |
+| **State Management** | In-memory cache or Redis |
+| **Audio Processing** | PyAudio, Pydub, or WebRTC |
+
+---
+
+## 📋 Getting Started
 
 ### Prerequisites
+- Python 3.9+ or Node.js 16+
+- API keys for:
+  - OpenAI / Claude (LLM)
+  - Murf Falcon or alternative TTS
+  - Google Cloud / AssemblyAI (STT)
+- Microphone for real-time audio input
 
-Make sure you have the following installed:
-
-- Python 3.9+ with [uv](https://docs.astral.sh/uv/) package manager
-- Node.js 18+ with pnpm
-- [LiveKit CLI](https://docs.livekit.io/home/cli/cli-setup) (optional but recommended)
-- [LiveKit Server](https://docs.livekit.io/home/self-hosting/local/) for local development
 
 ### 1. Clone the Repository
 
@@ -166,12 +206,10 @@ uv run pytest
 
 Learn more about testing voice agents in the [LiveKit testing documentation](https://docs.livekit.io/agents/build/testing/).
 
-## Contributing & Community
-
 
 ## License
 
 This project is based on MIT-licensed templates from LiveKit and includes integration with Murf Falcon. See individual LICENSE files in backend and frontend directories for details.
 
 
-Built for the AI Voice Agents Challenge by murf.ai
+Built for the AI Voice Agents Challenge by murf.ai and taksshak
